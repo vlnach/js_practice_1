@@ -20,8 +20,10 @@ test("get started link", async ({ page }) => {
   ).toBeVisible();
 });
 
-test("chart exists", async ({ page }) => {
+test("chart exists + screenshot", async ({ page }) => {
   await page.goto("/");
   const chart = page.getByTestId("usd-eur-chart");
   await expect(chart).toBeVisible();
+
+  await expect(chart).toHaveScreenshot();
 });

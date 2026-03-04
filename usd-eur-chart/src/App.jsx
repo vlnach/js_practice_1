@@ -5,7 +5,7 @@ import UsdEurChart from "./UsdEurChart.jsx";
 
 function App() {
   return (
-    <Container maxWidth="md">
+    <Container maxWidth="md" data-testid="usd-eur-chart">
       <Box sx={{ my: 4 }}>
         <Typography variant="h4" component="h1" gutterBottom>
           USD / EUR — исторический курс
