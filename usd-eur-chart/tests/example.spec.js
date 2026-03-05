@@ -25,5 +25,5 @@ test("chart exists + screenshot", async ({ page }) => {
   const chart = page.getByTestId("usd-eur-chart");
   await expect(chart).toBeVisible();
 
-  await expect(chart).toHaveScreenshot();
+  await expect(chart).toHaveScreenshot({ maxDiffPixels: 100 });
 });

@@ -47,21 +47,23 @@ function UsdEurChart() {
   const yData = lastPoints.map((item) => Number(item._OBS_VALUE));
 
   return (
-    <LineChart
-      xAxis={[
-        {
-          data: xData,
-          scaleType: "time",
-        },
-      ]}
-      series={[
-        {
-          data: yData,
-          label: "USD за 1 EUR",
-        },
-      ]}
-      height={400}
-    />
+    <Box data-testid="usd-eur-chart">
+      <LineChart
+        xAxis={[
+          {
+            data: xData,
+            scaleType: "time",
+          },
+        ]}
+        series={[
+          {
+            data: yData,
+            label: "USD за 1 EUR",
+          },
+        ]}
+        height={400}
+      />
+    </Box>
   );
 }
 
