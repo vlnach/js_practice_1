@@ -21,7 +21,8 @@ const books = [
 
 function analyzeBookSales(booksArray) {
   const counter = {};
-  booksArray.reduce((sum, book) => (sum = sum + book.category));
+  booksArray.reduce((hasIt, book) => (if (counter.has(hasIt)) book.category++));
 
-  return booksArray;
+  const result = [];
+  return result;
 }
